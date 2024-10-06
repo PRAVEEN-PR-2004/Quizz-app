@@ -1,8 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 const Home = () => {
+  const [loading, SetLoading] = useState(false);
+  const navigate = useNavigate();
+  const handleStateQuiz = () => {
+    SetLoading(true);
+    setTimeout(() => {
+      navigate("/quiz");
+      SetLoading(false);
+    }, 3000);
+  };
+
   return (
     <section className="lg:w-9/12 md:w-[90%] mx-auto mt-12 flex flex-col md:flex-row-reverse justify-between items-center px-4">
+      {loading && <Loading />}
       <div className="w-full md:w-1/2">
         <img
           src="../../public/images/banner.png"
@@ -18,9 +30,13 @@ const Home = () => {
           We help you prepare for exams and quizzes
         </p>
         <div className="flex items-center">
-          <button className="px-6 py-2 text-white rounded bg-primary">
+          <button
+            onClick={handleStateQuiz}
+            className="px-6 py-2 text-white rounded bg-primary"
+          >
             Start Quizz
           </button>
+
           <button className="inline-flex items-center px-6 py-2 ml-3 transition-all duration-300 ease-in border rounded text-primary hover:bg-primary hover:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
