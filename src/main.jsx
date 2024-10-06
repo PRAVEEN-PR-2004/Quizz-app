@@ -6,7 +6,6 @@ import Quiz from "./components/Quiz.jsx";
 import "./index.css";
 import Aboutus from "./components/Aboutus.jsx";
 import Howitoworks from "./components/Howitoworks.jsx";
-import Features from "./components/Features.jsx";
 
 function Main() {
   return (
@@ -17,7 +16,6 @@ function Main() {
           <Route path="quiz" element={<Quiz />} />
           <Route path="aboutus" element={<Aboutus />} />
           <Route path="howitworks" element={<Howitoworks />} />
-          <Route path="features" element={<Features />} />
         </Route>
       </Routes>
     </BrowserRouter>

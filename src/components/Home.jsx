@@ -11,6 +11,9 @@ const Home = () => {
       SetLoading(false);
     }, 3000);
   };
+  const handleKnowMore = () => {
+    navigate("/aboutus");
+  };
 
   return (
     <section className="lg:w-9/12 md:w-[90%] mx-auto mt-12 flex flex-col md:flex-row-reverse justify-between items-center px-4">
@@ -27,24 +30,27 @@ const Home = () => {
           Learn new concepts for each question
         </h2>
         <p className="py-2 pl-2 mb-6 text-gray-500 border-l-4">
-          We help you prepare for exams and quizzes
+          We make learning English accessible and enjoyable.
         </p>
-        <div className="flex items-center">
+        <div className="flex flex-col items-center md:flex-row md:space-x-3">
           <button
             onClick={handleStateQuiz}
-            className="px-6 py-2 text-white rounded bg-primary"
+            className="w-full px-6 py-2 mb-8 text-white rounded md:w-auto bg-primary md:mb-0"
           >
-            Start Quizz
+            Start Quiz
           </button>
 
-          <button className="inline-flex items-center px-6 py-2 ml-3 transition-all duration-300 ease-in border rounded text-primary hover:bg-primary hover:text-white">
+          <button
+            onClick={handleKnowMore}
+            className="inline-flex items-center justify-center w-full px-6 py-2 transition-all duration-300 ease-in border rounded md:w-auto text-primary hover:bg-primary hover:text-white"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-6 h-6 mr-2" // Adjusted icon size and added margin
             >
               <path
                 strokeLinecap="round"
@@ -52,7 +58,8 @@ const Home = () => {
                 d="m8.25 4.5 7.5 7.5-7.5 7.5"
               />
             </svg>
-            Know more
+            <span className="flex items-center">Know more</span>{" "}
+            {/* Center the text */}
           </button>
         </div>
       </div>

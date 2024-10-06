@@ -6,14 +6,14 @@ const Aboutus = () => {
       <div className="w-11/12 p-10 rounded-lg shadow-md lg:w-2/3 bg-secondary">
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold text-gray-800">
-            About Learn<sapn className="text-primary">ENG</sapn>
+            About Learn<span className="text-primary">ENG</span>
           </h1>
         </header>
         <article>
-          <p className="mb-6 text-xl leading-relaxed text-gray-700">
+          <p className="mb-6 text-lg font-medium leading-relaxed text-gray-600">
             Welcome to{" "}
             <strong>
-              Learn<sapn className="text-primary">ENG</sapn>
+              Learn<span className="text-primary">ENG</span>
             </strong>
             , your go-to platform for mastering the English language in a fun,
             interactive, and engaging way! At LearnENG, we believe that learning
@@ -22,9 +22,11 @@ const Aboutus = () => {
             a beginner or looking to enhance your proficiency, our platform is
             designed to help you improve your English skills step by step.
           </p>
-          <ul className="text-xl leading-relaxed text-gray-700 list-disc list-inside">
-            <li>Learn at your own pace, anytime and anywhere.</li>
-            <li>
+          <ul className="text-lg leading-relaxed text-gray-600 list-disc list-inside">
+            <li className="mb-2">
+              Learn at your own pace, anytime and anywhere.
+            </li>
+            <li className="mb-2">
               Challenge yourself with quizzes designed for all levels, from
               beginner to advanced.
             </li>
