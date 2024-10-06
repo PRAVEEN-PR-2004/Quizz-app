@@ -29,7 +29,7 @@ const Home = () => {
         <p className="py-2 pl-2 mb-6 text-gray-500 border-l-4">
           We make learning English accessible and enjoyable.
         </p>
-        <div className="flex flex-col items-center md:flex-row md:space-x-3">
+        <div className="flex flex-col items-center mb-6 md:flex-row md:space-x-3">
           <button
             onClick={handleStateQuiz}
             className="w-full px-6 py-2 mb-8 text-white rounded md:w-auto bg-primary md:mb-0"

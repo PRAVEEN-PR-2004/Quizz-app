@@ -71,22 +71,24 @@ const Quiz = () => {
             </div>
           ))}
 
-          <button
-            className="px-6 py-2 ml-3.5 text-white rounded bg-primary"
-            onClick={handleSubmit}
-          >
-            Submit Quiz
-          </button>
-
-          {/* Reset button */}
-          {showResult && (
+          <div className="flex flex-col items-center justify-center w-full space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             <button
-              className="px-6 py-2 ml-6 text-white bg-red-500 rounded"
-              onClick={handleReset}
+              className="w-full px-6 py-2 text-white rounded bg-primary md:w-auto"
+              onClick={handleSubmit}
             >
-              Reset Quiz
+              Submit Quiz
             </button>
-          )}
+
+            {/* Reset button */}
+            {showResult && (
+              <button
+                className="w-full px-6 py-2 text-white bg-red-500 rounded md:w-auto"
+                onClick={handleReset}
+              >
+                Reset Quiz
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Display Result and Explanation */}
