@@ -1,26 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Quiz from "./components/Quiz.jsx";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "quiz",
-        element: <Quiz />,
-      },
-    ],
-  },
-]);
+import "./index.css";
+import Aboutus from "./components/Aboutus.jsx";
+import Howitoworks from "./components/Howitoworks.jsx";
+import Features from "./components/Features.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
-);
+function Main() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="quiz" element={<Quiz />} />
+          <Route path="aboutus" element={<Aboutus />} />
+          <Route path="howitworks" element={<Howitoworks />} />
+          <Route path="features" element={<Features />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+createRoot(document.getElementById("root")).render(<Main />);

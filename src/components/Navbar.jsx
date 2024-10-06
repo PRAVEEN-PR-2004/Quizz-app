@@ -1,39 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Use Link for client-side navigation
 import logo from "../../public/images/logo.png";
 
 const Navbar = () => {
   return (
     <header className="h-16 shadow-sm">
       <nav className="flex items-center justify-between w-9/12 h-full mx-auto">
-        <a href="/" className="flex items-center ">
+        <Link to="/" className="flex items-center ">
           <img src={logo} alt="logo" className="h-10" />
-        </a>
+        </Link>
 
         <div className="flex items-center space-x-5">
           <ul className="items-center hidden space-x-8 md:flex">
             <li>
-              <a
-                href="#how-it-works"
+              <Link
+                to="/howitworks"
                 className="transition-colors hover:text-primary"
               >
                 How it works?
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#features"
+              <Link
+                to="/features"
                 className="transition-colors hover:text-primary"
               >
                 Features
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about-us"
+              <Link
+                to="/aboutus"
                 className="transition-colors hover:text-primary"
               >
                 About us
-              </a>
+              </Link>
             </li>
           </ul>
 
