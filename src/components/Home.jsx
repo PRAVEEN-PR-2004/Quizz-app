@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "./Loading";
+import homeimg from "../../public/images/banner.png";
 const Home = () => {
   const [loading, SetLoading] = useState(false);
   const navigate = useNavigate();
@@ -19,11 +20,7 @@ const Home = () => {
     <section className="lg:w-9/12 md:w-[90%] mx-auto mt-12 flex flex-col md:flex-row-reverse justify-between items-center px-4">
       {loading && <Loading />}
       <div className="w-full md:w-1/2">
-        <img
-          src="../../public/images/banner.png"
-          alt="banner"
-          className="w-full mx-auto"
-        ></img>
+        <img src={homeimg} alt="banner" className="w-full mx-auto"></img>
       </div>
       <div className="w-full space-y-8 md:w-1/2">
         <h2 className="my-8 lg:text-4xl text-3xl font-medium text-[#333] md:w-4/6 lg:leading-normal leading-normal mb-3 ">
